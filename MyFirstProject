@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace MyFirstProject
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1, num2, result = 0;
+            char op;
+
+            do
+            {
+                Console.WriteLine("Hello BSIT-223");
+
+                Console.Write("Please Input your 1st Number: ");
+
+                num1 = int.Parse(Console.ReadLine());
+
+
+                Console.Write("What operation do you want to use? (+,-,*,/,%) ");
+                op = char.Parse(Console.ReadLine());
+
+                Console.Write("Please Input your 2nd Number: ");
+
+                num2 = int.Parse(Console.ReadLine());
+
+                switch (op)
+                {
+                    case '+':
+                        result = num1 + num2;
+                        break;
+                    case '-':
+                        result = num1 - num2;
+                        break;
+                    case '/':
+                        result = num1 / num2;
+                        break;
+                    case '%':
+                        result = num1 % num2;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Operation");
+                        break;
+
+                }
+
+                Console.WriteLine("The Result is is " + result);
+
+                Console.WriteLine("Do you want to Compute again ? [y/n]");
+                char response = char.Parse(Console.ReadLine());
+                if (response == 'n')
+                {
+                    break;
+                }
+            } while (true);
+                    
+    }
+    }
+}
